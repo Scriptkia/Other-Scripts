@@ -1,0 +1,29 @@
+local plr = gameGetService(Players).LocalPlayer
+local mouse = plrGetMouse()
+
+local tool = Instance.new(Tool)
+tool.RequiresHandle = false
+tool.Name = Hold W and Click
+
+tool.ActivatedConnect(function()
+local root = plr.Character.HumanoidRootPart
+
+
+ local ball = gameGetService(Workspace).FootballFieldFindFirstChild(SoccerBall)
+local team = plr.CharacterFindFirstChild(TeamA) or plr.CharacterFindFirstChild(TeamB)
+local Goal = false
+if team then
+if team.Name == TeamA then
+Goal = gameGetService(Workspace).FootballField.DetecterGoalB
+elseif team.Name == TeamB then
+Goal = gameGetService(Workspace).FootballField.DetecterGoalA
+end
+end
+if ball and Goal and team then
+local Distance = (Goal.CFrame.p - ball.CFrame.p).Magnitude
+root.CFrame = CFrame.new(Goal.CFrame.p, ball.CFrame.p)  CFrame.new(0, 0, -Distance - 3)
+root.CFrame = CFrame.new(root.Position, Goal.Position)
+end
+end)
+
+tool.Parent = plr.Backpack
