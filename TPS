@@ -8,6 +8,13 @@ local infstam = Instance.new("TextButton")
 local reach = Instance.new("TextButton")
 local guitext = Instance.new("TextLabel")
 local credit = Instance.new("TextLabel")
+local Plr = game.Players.LocalPlayer
+ 
+Plr:GetMouse().KeyDown:Connect(function(K)
+    if K == "-" then
+        script.Parent.Visible = true
+    end
+    end)
 
 --Properties:
 
