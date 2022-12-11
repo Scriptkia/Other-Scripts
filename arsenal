@@ -263,7 +263,7 @@ local Notify = AkaliNotif.Notify;
 
 if game.PlaceId ~= 999999999 then 
     Notify({
-        Title = "<b><font color=\"rgb(140, 91, 159)\"> Arsenal Lean! -- CandyLean#2645</font></b>";
+        Title = "<b><font color=\"rgb(140, 91, 159)\"> Arsenal Lean -- Made by Scriptkia</font></b>";
         Description = "Spoofed User/Cheat Disabled! Enjoy";
         Duration = 10;
     });
