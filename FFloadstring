@@ -1,1 +1,1 @@
-working on this
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptkia/Other-Scripts/main/FunkyFriday"))()
